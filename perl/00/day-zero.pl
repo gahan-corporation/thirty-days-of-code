@@ -1,7 +1,14 @@
 #!/usr/local/bin/perl
-
-my $inputString = <STDIN>;
+use strict;
+use warnings;
 
 print "Hello, World.\n";
 
-print $inputString;
+my $text;
+alarm(5);
+eval {
+  local $SIG{ALRM} = sub { die };
+  $text = <STDIN>;
+};
+
+print $text;
