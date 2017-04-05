@@ -1,5 +1,6 @@
 # Read a full line of input from stdin and save it to our dynamically typed variable, input_string.
-input_string = gets
+#input_string = gets
+input_string = 'This is the input string.'
 
 # Print a string literal saying "Hello, World." to stdout.
 puts 'Hello, World.'
