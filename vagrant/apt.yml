@@ -16,5 +16,14 @@
     - name: Dist upgrade.
       apt:
         upgrade: dist 
+    - name: Install some packages we'd like to have.
+      apt:
+        name: "{{ item }}"  
+        state: latest
+      with_items:
+        - build-essential
+        - python-dev
+        - ruby
+
 ...
 # vim: ft=ansible :
