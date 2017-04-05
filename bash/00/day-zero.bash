@@ -9,7 +9,7 @@ echo 'Hello, World.'
 # Write the second line of output
 if [[ $? -ne 0 ]]
 then
-  echo $inputString
-else
   echo "There weren't no input."
+else
+  echo $inputString
 fi
