@@ -13,6 +13,20 @@ public class DayOne {
 
     Scanner scan = new Scanner(System.in);
 
+    int j = scan.nextInt();
+
+    double e = scan.nextDouble();
+
+    String t = scan.nextLine();
+
+    int k = i + j;
+    System.out.println(k);
+
+    double f = d + e;
+    System.out.println(f);
+
+    String u = s + "" + t;
+
     scan.close();
 
   }
