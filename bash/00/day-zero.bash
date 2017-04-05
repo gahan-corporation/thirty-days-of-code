@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
-read inputString # get a line of input from stdin and save it to our variable
+#read inputString # get a line of input from stdin and save it to our variable
+export inputString="This is the input string."
 
 # Your first line of output goes here
 echo 'Hello, World.'
