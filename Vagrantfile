@@ -52,4 +52,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible_local" do |a|
     a.playbook = "/vagrant/vagrant/apt.yml"
   end
+  config.vm.provision "ansible_local" do |sbt|
+    sbt.playbook = "/vagrant/vagrant/sbt.yml"
+  end
 end
