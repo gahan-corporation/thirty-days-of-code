@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt-get -y update
-sudo apt-get -y install build-essential libapt-pkg-dev libffi-dev libssl-dev python-dev 
+sudo apt-get -y install build-essential intltool libapt-pkg-dev libffi-dev libssl-dev python-dev 
 wget https://bootstrap.pypa.io/get-pip.py -O /tmp/get-pip.py
 sudo python /tmp/get-pip.py
 rm -v /tmp/get-pip.py
