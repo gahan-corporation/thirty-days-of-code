@@ -32,7 +32,7 @@ eval {
 };
 
 # Print the sum of both integer variables on a new line.
-$int = $i + $int;
+$int = $i+$int;
 print $int."\n";
 
 # Print the sum of the double variables on a new line.
