@@ -58,4 +58,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "ansible_local" do |go| 
     go.playbook = "/vagrant/vagrant/go.yml"
   end
+  config.vm.provision "ansible_local" do |java| 
+    java.playbook = "/vagrant/vagrant/java.yml"
+  end
 end
