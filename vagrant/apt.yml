@@ -1,7 +1,7 @@
 ---
 - name: Update apt packages, install aptitude.
   become: yes
-  hosts: localhost
+  hosts: all 
   tasks:
     - name: Install aptitude.
       apt:
