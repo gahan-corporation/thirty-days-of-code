@@ -7,19 +7,23 @@ import (
   "time"
 )
 
-func main() {
+func getInput(input chan string) {
+  for {
+    in := bufio.NewReader(os.Stdin)
+    result, _ := in.ReadString('\n')
+    input <- result
+  }
+}
 
-  reader := bufio.NewReader(os.Stdin)
-  //text, _ := reader.ReadString('\n')
+func main() {
+  input := make(chan string, 1)
+  go getInput(input)
 
   fmt.Println("Hello, World.")
-
-  for {
-    select {
-    case i := <-input:
-        fmt.Println(i)
-    case <-time.After(4000 * time.Millisecond):
-        fmt.Println("There weren't no input.")
-    }
+  select {
+  case i := <-input:
+      fmt.Println(i)
+  case <-time.After(4000 * time.Millisecond):
+      fmt.Println("There weren't no input.")
   }
 }
