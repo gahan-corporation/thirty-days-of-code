@@ -10,7 +10,7 @@ int main() {
 
   double add_int; 
   double add_dec;
-  char add_str[];
+  char add_str[100];
 
   scanf("%[^\n]", read_int); 
   scanf("%[^\n]", read_dec); 
