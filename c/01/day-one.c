@@ -4,13 +4,15 @@
 #include <stdlib.h>
 
 int main() {
-  int i = 4;
-  double d = 8;
-  char s[] = "Run's house";
+  int read_int = 4;
+  double read_dec = 8;
+  char read_str[] = "Run's house";
 
-  printf("%i\n",i);
+  double add_int; 
+  double add_dec;
+  char add_str[];
 
-  printf("%d\n",d);
-
-  printf("%s\n",s);
+  scanf("%[^\n]", read_int); 
+  scanf("%[^\n]", read_dec); 
+  scanf("%[^\n]", read_str); 
 }
