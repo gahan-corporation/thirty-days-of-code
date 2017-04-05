@@ -8,5 +8,6 @@ object Solution {
 
         // Print the value of the string variable
         
+        println(s)
     }
 }
