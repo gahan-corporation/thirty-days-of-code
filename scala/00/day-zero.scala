@@ -4,7 +4,8 @@ object Solution {
         println("Hello, World.")
 
         // Read a string variable
-        val s = scala.io.StdIn.readLine()
+        //val s = scala.io.StdIn.readLine()
+        val s = 'This is the input string.'
 
         // Print the value of the string variable
         
