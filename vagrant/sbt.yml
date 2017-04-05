@@ -19,5 +19,6 @@
       apt:
         name: sbt
         state: latest
+        allow_unauthenticated: yes
 ...
 # vim: ft=ansible :
