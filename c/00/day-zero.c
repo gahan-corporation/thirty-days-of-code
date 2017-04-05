@@ -9,6 +9,7 @@ int main() {
     printf("Hello, World.\n");
     
     // TODO: Write a line of code here that prints the contents of input_string to stdout.
+    printf("%s\n", input_string);
     
     return 0;
 }
