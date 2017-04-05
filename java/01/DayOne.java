@@ -16,7 +16,7 @@ public class DayOne {
     int j = scan.nextInt();
 
     double e = scan.nextDouble();
-
+    scan.nextLine(); // To consume the remaining newline.
     String t = scan.nextLine();
 
     int k = i + j;
