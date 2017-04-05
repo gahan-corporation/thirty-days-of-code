@@ -1,3 +1,8 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
 int main() {
     // Declare a variable named 'input_string' to hold our input.
     char input_string[105]; 
