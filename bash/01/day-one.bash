@@ -8,7 +8,9 @@ read -t 5 str
 
 if [[ $? -ne 0 ]]
 then
-  echo "There weren't no input."
+  export int = 8
+  export dec = 12
+  export str = "Run's house" 
 else
   echo "$int + $dec" | bc -l
   echo "$dec + $dec" | bc -l
