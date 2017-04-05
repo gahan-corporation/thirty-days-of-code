@@ -1,0 +1,23 @@
+---
+- name: Install go.
+  become: yes
+  hosts: all
+  tasks:
+    - name: Unarchive go.
+      unarchive:
+        copy: no
+        dest: /opt
+        src: https://storage.googleapis.com/golang/go1.6.linux-amd64.tar.gz 
+    - name: Add go to the executable path.
+      lineinfile:
+        dest: /etc/profile
+        line: export PATH=$PATH:/opt/go/bin
+        state: present
+    - name: Make sure everyone can run the thing.
+      file:
+        state: directory
+        recurse: yes
+        dest: /opt/go/bin
+        mode: ugo+x
+...
+# vim: ft=ansible :
