@@ -1,0 +1,20 @@
+---
+- name: Update apt packages, install aptitude.
+  become: yes
+  hosts: localhost
+  tasks:
+    - name: Install aptitude.
+      apt:
+        name: aptitude
+        state: latest
+    - name: Update apt cache.
+      apt:
+        update_cache: yes
+    - name: Upgrade apt packages.
+      apt:
+        upgrade: safe
+    - name: Dist upgrade.
+      apt:
+        upgrade: dist 
+...
+# vim: ft=ansible :
