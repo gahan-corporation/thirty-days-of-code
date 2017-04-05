@@ -1,3 +1,16 @@
 ---
+- name: Install Oracle's borked Java.
+  become: yes
+  hosts: all
+  tasks:
+    - name: Add the webupdate repo.
+      apt_repository:
+        repo: ppa:webupd8team/java
+        state: present
+    - name: Install java.
+      apt:
+        name: oracle-java8-installer
+        state: latest
+        update_cache: yes
 ...
 # vim: ft=ansible :
