@@ -8,9 +8,9 @@ read -t 5 str
 
 if [[ $? -ne 0 ]]
 then
-  export int = 8
-  export dec = 12
-  export str = "Run's house" 
+  export int=8
+  export dec=12
+  export str="Run's house" 
 else
   echo "$int + $dec" | bc -l
   echo "$dec + $dec" | bc -l
