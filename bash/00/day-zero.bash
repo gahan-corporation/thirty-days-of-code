@@ -6,3 +6,5 @@ read inputString # get a line of input from stdin and save it to our variable
 echo 'Hello, World.'
 
 # Write the second line of output
+
+echo $inputString
