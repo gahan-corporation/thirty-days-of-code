@@ -1,0 +1,20 @@
+---
+- name: Install Oracle's borked Java.
+  become: yes
+  hosts: all
+  tasks:
+    - name: Add the webupdate repo.
+      apt_repository:
+        repo: ppa:webupd8team/java
+        state: present
+    - name: Update the apt cache as a separate thing.
+      apt:
+        update_cache: yes
+    - name: Add the auto accept license to apt.
+      shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
+    - name: Install java.
+      apt:
+        name: oracle-java8-installer
+        state: latest
+...
+# vim: ft=ansible :

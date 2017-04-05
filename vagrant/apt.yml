@@ -1,0 +1,29 @@
+---
+- name: Update apt packages, install aptitude.
+  become: yes
+  hosts: all 
+  tasks:
+    - name: Install aptitude.
+      apt:
+        name: aptitude
+        state: latest
+    - name: Update apt cache.
+      apt:
+        update_cache: yes
+    - name: Upgrade apt packages.
+      apt:
+        upgrade: safe
+    - name: Dist upgrade.
+      apt:
+        upgrade: dist 
+    - name: Install some packages we'd like to have.
+      apt:
+        name: "{{ item }}"  
+        state: latest
+      with_items:
+        - build-essential
+        - python-dev
+        - ruby
+
+...
+# vim: ft=ansible :

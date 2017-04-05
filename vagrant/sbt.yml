@@ -1,0 +1,24 @@
+---
+- name: Install sbt.
+  become: yes
+  hosts: all 
+  tasks:
+    - name: Install the apt repository.
+      apt_repository:
+        repo: deb https://dl.bintray.com/sbt/debian /
+        state: present
+    - name: Install the apt key.
+      apt_key:
+        keyserver: keyserver.ubuntu.com
+        id: 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+        state: present
+    - name: Update apt cache.
+      apt:
+        update_cache: yes
+    - name: Install Scala Build Tool.
+      apt:
+        name: sbt
+        state: latest
+        allow_unauthenticated: yes
+...
+# vim: ft=ansible :

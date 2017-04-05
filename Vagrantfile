@@ -49,9 +49,16 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  config.vm.provision "shell", path: "vagrant/apt.bash"
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
+  config.vm.provision "ansible_local" do |a|
+    a.playbook = "/vagrant/vagrant/apt.yml"
+  end
+  config.vm.provision "ansible_local" do |sbt|
+    sbt.playbook = "/vagrant/vagrant/sbt.yml"
+  end
+  config.vm.provision "ansible_local" do |go| 
+    go.playbook = "/vagrant/vagrant/go.yml"
+  end
+  config.vm.provision "ansible_local" do |java| 
+    java.playbook = "/vagrant/vagrant/java.yml"
+  end
 end
