@@ -1,7 +1,7 @@
 public class DayFour {
     private int age;	
   
-	public Person(int initialAge) {
+	public void Person(int initialAge) {
   		if (initialAge > 0) {
             age = initialAge;
         } else {
