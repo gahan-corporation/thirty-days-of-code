@@ -23,7 +23,7 @@ func main() {
   select {
   case i := <-input:
       fmt.Println(i)
-  case <-time.After(4000 * time.Millisecond):
+  case <-time.After(100 * time.Millisecond):
       fmt.Println("There weren't no input.")
   }
 }
