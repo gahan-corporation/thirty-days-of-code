@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use POSIX qw(ceil);
 
 my $meal;
 my $tip;
@@ -11,7 +12,7 @@ my $total;
 alarm(1);
 eval {
   local $SIG{ALRM} = sub { 
-    $meal = 100; 
+    $meal = 125.10; 
     die;
   };
   $meal = <STDIN>;
@@ -38,6 +39,6 @@ eval {
 $tip = $meal * ($tip / 100);
 $tax = $meal * ($tax / 100);
 
-$total = $meal + $tip + $tax;
+$total = ceil($meal + $tip + $tax);
 
 printf("The total meal cost is %i dollars.", $total); 
