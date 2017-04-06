@@ -2,9 +2,9 @@
 
 # Apparently there's no HackerRank test for this so I'll just write the code here.
 
-read -t 5 int
-read -t 5 dec
-read -t 5 str
+read -t 1 int
+read -t 1 dec
+read -t 1 str
 
 if [[ $? -ne 0 ]]
 then
