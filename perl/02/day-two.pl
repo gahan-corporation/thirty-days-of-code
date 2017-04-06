@@ -12,7 +12,7 @@ my $total;
 alarm(1);
 eval {
   local $SIG{ALRM} = sub { 
-    $meal = 125.10; 
+    $meal = 10.25; 
     die;
   };
   $meal = <STDIN>;
@@ -21,7 +21,7 @@ eval {
 alarm(1);
 eval {
   local $SIG{ALRM} = sub { 
-    $tip = 100; 
+    $tip = 17; 
     die;
   };
   $tip = <STDIN>;
@@ -30,7 +30,7 @@ eval {
 alarm(1);
 eval {
   local $SIG{ALRM} = sub { 
-    $tax = 9; 
+    $tax = 5; 
     die;
   };
   $tax = <STDIN>;
