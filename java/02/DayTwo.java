@@ -1,29 +1,25 @@
-import java.io.*;
 import java.util.*;
-import java.text.*;
 import java.math.*;
-import java.util.regex.*;
+
 public class DayTwo {
-   
-   public static void main(String[] args) {
-      Scanner scan = new Scanner(System.in);
-      int n = scan.nextInt(); 
-      scan.close();
-      String ans="";
-          
-      // if 'n' is NOT evenly divisible by 2 (i.e.: n is odd)
-      if(n%2==1){
-         ans = "Weird";
-      }
-      else if (n%2==0 && n > 1 && n < 6) {
-         ans = "Not Weird";
-      }
-      else if (n%2==0 && n > 5 && n < 21) {
-         ans = "Weird";
-      }
-      else if (n%2==0 && n > 20) {
-         ans = "Not Weird";
-      }
-      System.out.println(ans);
-   }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        double mealCost = scan.nextDouble(); // original meal price
+        int tipPercent = scan.nextInt(); // tip percentage
+        int taxPercent = scan.nextInt(); // tax percentage
+        scan.close();
+        float totalCost;
+      
+        // Write your calculation code here.
+        float tip = (float)mealCost * tipPercent/100;
+        float tax = (float)mealCost * taxPercent/100;
+      
+        totalCost = (float)mealCost + tip + tax;
+        // cast the result of the rounding operation to an int and save it as totalCost 
+        int total = (int) Math.round(totalCost);
+      
+        // Print your result
+        System.out.println("The total meal cost is "+total+" dollars.");
+    }
 }
