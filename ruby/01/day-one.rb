@@ -14,7 +14,7 @@ begin
   Timeout::timeout(1) do
     j = gets
 
-    k = i + j
+    k = i + j.to_i
 
     puts k
   end
