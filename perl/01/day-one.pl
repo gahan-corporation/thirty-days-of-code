@@ -13,19 +13,19 @@ my $dec = 0.0;
 my $str = "";
 
 # Read and save an integer, double, and String to your variables.
-alarm(5);
+alarm(1);
 eval {
   local $SIG{ALRM} = sub { die };
   $int = <STDIN>;
 };
 
-alarm(5);
+alarm(1);
 eval {
   local $SIG{ALRM} = sub { die };
   $dec = <STDIN>;
 };
 
-alarm(5);
+alarm(1);
 eval {
   local $SIG{ALRM} = sub { die };
   $str = <STDIN>;
