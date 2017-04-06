@@ -7,13 +7,13 @@ i = 4
 d = 4.0
 s = "Run's house "
 
-j, e, t = select.select([sys.stdin], [sys.stdin], [sys.stdin], 1)
+j = select.select([sys.stdin], [], [], 1)
 
-k = i + j
+if len(j[0]) > 0:
+    j = j[0]
 
-print(k)
+    k = i + j
 
-if len(input_string[0]) > 0:
-    print(input_string[0])
+    print(k)
 else:
     print("There weren't no input.")
