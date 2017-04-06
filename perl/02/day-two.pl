@@ -2,7 +2,6 @@
 
 use strict;
 use warnings;
-use POSIX qw(ceil);
 
 my $meal;
 my $tip;
@@ -39,6 +38,6 @@ eval {
 $tip = $meal * ($tip / 100);
 $tax = $meal * ($tax / 100);
 
-$total = ceil($meal + $tip + $tax);
+$total = $meal + $tip + $tax;
 
-printf("The total meal cost is %i dollars.", $total); 
+printf("The total meal cost is %.0f dollars.", $total); 
