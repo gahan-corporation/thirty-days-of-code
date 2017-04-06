@@ -4,7 +4,7 @@ require 'timeout'
 puts 'Hello, World.'
 
 begin
-  Timeout::timeout(5) do
+  Timeout::timeout(1) do
     input_string = gets
   end
 
