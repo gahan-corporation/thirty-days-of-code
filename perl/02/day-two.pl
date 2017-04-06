@@ -35,9 +35,9 @@ eval {
   $tax = <STDIN>;
 };
 
-$tip = $tip / 100;
-$tax = $tax / 100;
+$tip = $meal * ($tip / 100);
+$tax = $meal * ($tax / 100);
 
-print $tip;
-print $tax;
+$total = $meal + $tip + $tax;
 
+printf("The total meal cost is %i dollars.", $total); 
