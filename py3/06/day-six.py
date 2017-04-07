@@ -30,4 +30,7 @@ for i in range(0, len(s)):
         else:
             s_odd.append(v)
 
-    print("{0} {1}".format(s_even, s_odd))
+    s_even = ''.join(s_even);
+    s_odd = ''.join(s_odd);
+
+    print("{0} {1}\n".format(s_even, s_odd))
