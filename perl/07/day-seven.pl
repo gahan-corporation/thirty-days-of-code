@@ -25,4 +25,7 @@ eval {
   }
 };
 
-
+my @sa = split / /, $s;
+for ($i = $t; $i > -1; $i--) {
+  printf("%i ", $sa[$i]);
+}
