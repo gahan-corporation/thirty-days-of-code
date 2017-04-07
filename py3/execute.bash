@@ -2,32 +2,32 @@
 
 printf "Testing alexander-laughlin submissions.\n\n\n";
 python3 py3/00/day-zero.py
-printf "\n\n\n Test zero passed. \n";
+printf "\nTest zero passed.\n\n";
 
 python3 py3/01/day-one.py
-printf "\n\n\n Test one passed. \n";
+printf "\nTest one passed. \n\n";
 
 python3 py3/02/day-two.py
-printf "\n\n\n Test two passed. \n";
+printf "\nTest two passed. \n\n";
 
 python3 py3/03/day-three.py
-printf "\n\n\n Test three passed. \n";
+printf "\nTest three passed. \n\n";
 
 python3 py3/04/day-four.py
-printf "\n\n\n Test four passed. \n";
+printf "\nTest four passed. \n\n";
 
 python3 py3/05/day-five.py
-printf "\n\n\n Test five passed. \n";
+printf "\nTest five passed. \n\n";
 
 python3 py3/06/day-six.py
-printf "\n\n\n Test six passed. \n";
+printf "\nTest six passed. \n\n";
 
 python3 py3/07/day-seven.py
-printf "\n\n\n Test seven passed. \n";
+printf "\nTest seven passed. \n\n";
 
 python3 py3/08/day-eight.py
-printf "\n\n\n Test eight passed. \n";
+printf "\nTest eight passed. \n\n";
 
 python3 py3/09/day-nine.py
-printf "\n\n\n Test nine passed. \n";
+printf "\nTest nine passed. \n\n";
 
