@@ -26,6 +26,7 @@ except Exception as e:
         "Brad",
         "Jennifer",
         "Billy",
+        "Joseph",
     ] 
 
 phone_book = {}
@@ -35,4 +36,7 @@ for si in s:
     if len(sa) > 1:
         phone_book.update({sa[0]:sa[1]})
     if len(sa) == 1:
-        print("{0}={1}".format(sa[0],phone_book.get(sa[0])))
+        if phone_book.get(sa[0]) != None:
+            print("{0}={1}".format(sa[0],phone_book.get(sa[0])))
+        else:
+            print("Not found")
