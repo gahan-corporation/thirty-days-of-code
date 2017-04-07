@@ -20,4 +20,14 @@ except:
         else:
             s.append("I firmly believe that any man's finest hour, the greatest fulfillment of all that he holds dear, is that moment when he has worked his heart out in a good cause and lies exhausted on the field of battle - victorious.")
 
-print(s)
+for i in range(0, len(s)):
+    s_odd = []
+    s_even = []
+
+    for k,v in enumerate(s[i]):
+        if k % 2 == 0:
+            s_even.append(v)
+        else:
+            s_odd.append(v)
+
+    print("{0} {1}".format(s_even, s_odd))
