@@ -17,4 +17,6 @@ except Exception as e:
     s = "0 9 8 1 3 7 3 9 1"
 
 sa = s.split(" ")
+sb = [i for i in reversed(sa)]
+sa = ' '.join(sb)
 print(sa)
