@@ -6,3 +6,4 @@ perl perl/02/day-two.pl
 perl perl/03/day-three.pl
 #perl perl/04/day-four.pl
 perl perl/05/day-five.pl
+perl perl/06/day-six.pl
