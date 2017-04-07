@@ -34,8 +34,6 @@ eval {
   }
 };
 
-print Dumper \@s;
-
 foreach $i (@s) {
   my @split = split / /, $i; 
   my $len = @split;
@@ -50,7 +48,5 @@ foreach $i (@s) {
     }
   }
 
-  print Dumper \@split;
 }
 
-print Dumper \%h;
