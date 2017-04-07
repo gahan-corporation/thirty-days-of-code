@@ -10,10 +10,8 @@ t = select.select([sys.stdin], [], [], 1)
 try:
     t = int(t[0][0].readline())
 
-    while u != "":
-        u = select.select([sys.stdin], [], [], 1)
-        s.append(u[0][0].readline())
-        
+    u = select.select([sys.stdin], [], [], 1)
+    s = u[0][0].readlines()
 except Exception as e:
     print(e)
     t = 5
@@ -34,9 +32,12 @@ phone_book = {}
 for si in s:
     sa = si.split(" ")
     if len(sa) > 1:
-        phone_book.update({sa[0]:sa[1]})
+        name=sa[0].strip()
+        number=sa[1].strip()
+        phone_book.update({name:number})
     if len(sa) == 1:
-        if phone_book.get(sa[0]) != None:
-            print("{0}={1}".format(sa[0],phone_book.get(sa[0])))
+        search=sa[0].strip()
+        if phone_book.get(search) != None:
+            print("{0}={1}".format(search,phone_book.get(search)))
         else:
             print("Not found")
