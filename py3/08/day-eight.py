@@ -18,19 +18,23 @@ except Exception as e:
     print(e)
     t = 5
     s = [
-        "Billy Bob Thornton 3107281113",
-        "Brad Pitt 8182229181",
-        "Johnny Lee Miller 2021849131",
-        "Angelina Jolie 4241982193",
-        "Jennifer Aniston 2918881111",
-        "Brad Pitt",
-        "Jennifer Aniston",
-        "Billy Bob Thornton",
+        "Billy 3107281113",
+        "Brad 8182229181",
+        "Johnny 2021849131",
+        "Angelina 4241982193",
+        "Jennifer 2918881111",
+        "Brad",
+        "Jennifer",
+        "Billy",
     ] 
 
+phone_book = {}
+
 for si in s:
-    sa = s.split(" ")
-    print(sa)
+    sa = si.split(" ")
+    if len(sa) > 1:
+        phone_book.update({sa[0]:sa[1]})
+    print(phone_book)
 sb = [i for i in reversed(sa)]
 sa = ' '.join(sb)
 print(sa)
