@@ -7,13 +7,14 @@ s = []
 t = select.select([sys.stdin], [], [], 1)
 
 try:
-    t = int(n[0][0].readline())
+    t = int(t[0][0].readline())
 
     for i in range(0,t):
         u = select.select([sys.stdin], [], [], 1)
         u = u[0][0].readline()
         s.append(u)
-except:
+except Exception as e:
+    print(e)
     t = 2
 
     for i in range(0,t):
@@ -32,7 +33,7 @@ for i in range(0, len(s)):
         else:
             s_odd.append(v)
 
-    s_even = ''.join(s_even);
-    s_odd = ''.join(s_odd);
+    s_even = ''.join(s_even).strip();
+    s_odd = ''.join(s_odd).strip();
 
-    print("{0} {1}\n".format(s_even, s_odd))
+    print("{0} {1}".format(s_even, s_odd))
