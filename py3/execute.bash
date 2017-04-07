@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo "Testing alexander-laughlin submissions.\n\n\n";
+echo "Testing alexander-laughlin submissions.";
+echo "";
 python3 py3/00/day-zero.py
 echo "\n\n\n Test zero passed. \n";
 
