@@ -4,7 +4,6 @@ use strict;
 use warnings;
 use Data::Dumper qw(Dumper);
 
-my $i;
 my %h;
 my @s;
 my $t;
@@ -26,16 +25,16 @@ eval {
   $t = <STDIN>;
 
   while (1) {
-    $i = <STDIN>;
-    
+    my $i = <STDIN>;
+    chomp $i;
     push(@s, $i);
-
     last if $i eq '';
   }
+  pop(@s);
 };
 
-foreach $i (@s) {
-  my @split = split / /, $i; 
+foreach my $j (@s) {
+  my @split = split / /, $j; 
   my $len = @split;
 
   if ($len > 1) {
@@ -49,4 +48,3 @@ foreach $i (@s) {
   }
 
 }
-
