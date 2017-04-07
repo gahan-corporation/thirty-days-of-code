@@ -5,7 +5,7 @@ use warnings;
 use Data::Dumper qw(Dumper);
 
 my $i;
-my $k;
+my %h;
 my @s;
 my $t;
 
@@ -34,4 +34,17 @@ eval {
   }
 };
 
-print Dumper (\@s);
+print Dumper \@s;
+
+foreach $i (@s) {
+  my @split = split / /, $i; 
+  my $len = @split;
+
+  if ($len > 1) {
+    $h{@split[0]} = @split[1]; 
+  }
+
+  print Dumper \@split;
+}
+
+print Dumper \%h;
