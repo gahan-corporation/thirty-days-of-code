@@ -6,3 +6,4 @@ python3 py3/02/day-two.py
 python3 py3/03/day-three.py
 python3 py3/04/day-four.py
 python3 py3/05/day-five.py
+python3 py3/06/day-six.py
