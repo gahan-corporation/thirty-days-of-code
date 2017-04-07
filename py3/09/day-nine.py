@@ -21,3 +21,4 @@ def factorial(n):
     return f
 
 m = factorial(t)
+print(m)
