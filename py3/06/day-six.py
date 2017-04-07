@@ -10,7 +10,9 @@ try:
     t = int(n[0][0].readline())
 
     for i in range(0,t):
-        print(i) 
+        u = select.select([sys.stdin], [], [], 1)
+        u = u[0][0].readline()
+        s.append(u)
 except:
     t = 2
 
