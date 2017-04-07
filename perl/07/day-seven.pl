@@ -21,7 +21,8 @@ eval {
   $t = <STDIN>;
 
   for ($i = 0; $i < $t; $i++) {
-    @s[$i] = <STDIN>; 
+    $s = <STDIN>; 
   }
 };
+
 
