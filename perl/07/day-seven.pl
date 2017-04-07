@@ -20,12 +20,10 @@ eval {
   };
   $t = <STDIN>;
 
-  for ($i = 0; $i < $t; $i++) {
-    $s = <STDIN>; 
-  }
+  $s = <STDIN>; 
 };
 
 my @sa = split / /, $s;
-for ($i = $t; $i > -1; $i--) {
-  printf("%i ", $sa[$i]);
+for ($i = $t-1; $i > -1; $i--) {
+  printf("%i ", @sa[$i]);
 }
