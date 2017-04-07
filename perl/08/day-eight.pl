@@ -42,6 +42,12 @@ foreach $i (@s) {
 
   if ($len > 1) {
     $h{@split[0]} = @split[1]; 
+  } else { 
+    if (exists $h{@split[0]}) {
+      printf("%s=%s\n",@split[0],$h{@split[0]});
+    } else {
+      print "Not found\n";
+    }
   }
 
   print Dumper \@split;
