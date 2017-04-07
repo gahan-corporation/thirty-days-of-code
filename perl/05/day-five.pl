@@ -4,6 +4,8 @@ use strict;
 use warnings;
 
 my $integer;
+my $i;
+my $k;
 
 alarm(1);
 eval {
@@ -16,5 +18,5 @@ eval {
 
 for ($i = 1; $i < 11; $i++) {
   $k = $i * $integer;
-  print $integer . " x " . $i . " = " . $k;
+  print $integer . " x " . $i . " = " . $k . "\n";
 }
