@@ -3,15 +3,21 @@
 import select
 import sys
 
-n = select.select([sys.stdin], [], [], 1)
+s = []
+t = select.select([sys.stdin], [], [], 1)
 
 try:
-    n = int(n[0][0].readline())
+    t = int(n[0][0].readline())
 
-    for i in range(1,11):
-        print("{0} x {1} = {2}".format(n,i,n*i))
+    for i in range(0,t):
+        print(i) 
 except:
-    n = 50
+    t = 2
 
-    for i in range(1,11):
-        print("{0} x {1} = {2}".format(n,i,n*i))
+    for i in range(0,t):
+        if i % 2 == 1:
+            s.append("There's no replacement for displacement.")
+        else:
+            s.append("I firmly believe that any man's finest hour, the greatest fulfillment of all that he holds dear, is that moment when he has worked his heart out in a good cause and lies exhausted on the field of battle - victorious.")
+
+print(s)
