@@ -4,17 +4,30 @@ use strict;
 use warnings;
 use Data::Dumper qw(Dumper);
 
-my $t;
+my $n;
 
 alarm(1);
 eval {
   local $SIG{ALRM} = sub { 
-    $t = 10;
+    $n = 3;
 
     die;
   };
-
-  $t = <STDIN>;
-
+  $n = <STDIN>;
 };
 
+my $f;
+
+sub factorial {
+  my $n = pop(@_);
+
+  if ($n == 1) {
+    return $n;
+  }
+
+  $f = factorial($n-1) * $n; 
+  return $f;
+}
+
+my $r = &factorial($n);
+print $r
