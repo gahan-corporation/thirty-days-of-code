@@ -8,3 +8,4 @@ python3 py3/04/day-four.py
 python3 py3/05/day-five.py
 python3 py3/06/day-six.py
 python3 py3/07/day-seven.py
+python3 py3/08/day-eight.py
