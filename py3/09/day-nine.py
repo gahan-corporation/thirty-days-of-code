@@ -10,5 +10,14 @@ try:
 
 except Exception as e:
     print(e)
-    t = 50
+    t = 3
 
+
+def factorial(n):
+    if n == 1:
+        return n 
+
+    f = factorial(n-1) * n
+    return f
+
+m = factorial(t)
