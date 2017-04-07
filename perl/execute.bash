@@ -33,3 +33,7 @@ printf "\n Test six passed.\n"
 printf "\n Test seven:\n"
 perl perl/07/day-seven.pl
 printf "\n Test seven passed.\n"
+
+printf "\n Test eight:\n"
+perl perl/08/day-eight.pl
+printf "\n Test eight passed.\n"
