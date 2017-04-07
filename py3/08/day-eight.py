@@ -34,7 +34,5 @@ for si in s:
     sa = si.split(" ")
     if len(sa) > 1:
         phone_book.update({sa[0]:sa[1]})
-    print(phone_book)
-sb = [i for i in reversed(sa)]
-sa = ' '.join(sb)
-print(sa)
+    if len(sa) == 1:
+        print("{0}={1}".format(sa[0],phone_book.get(sa[0])))
