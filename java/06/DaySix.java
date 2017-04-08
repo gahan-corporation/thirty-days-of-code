@@ -4,15 +4,16 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class DayFive {
+public class DaySix {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
+        String[] s = new String[n];
 
-        for (int i = 1; i < 11; i++) {
-          int k = n * i;
-          System.out.println(n + " x " + i + " = " + k);
+        for (int i = 0; i < n; i++) {
+          s[i] = in.nextLine(); 
+          System.out.println(s[i]);
         }
     }
 }

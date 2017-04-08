@@ -25,3 +25,7 @@ printf "\nPassed test four.\n\n";
 printf "Test five:\n\n";
 javac java/05/DayFive.java
 printf "\nPassed test five.\n\n";
+
+printf "Test six:\n\n";
+javac java/05/DaySix.java
+printf "\nPassed test six.\n\n";
