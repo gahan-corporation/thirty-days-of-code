@@ -21,6 +21,8 @@ python3 python/xander-harris/08/day-eight.py
 printf "\nTest eight passed. \n\n";
 python3 python/xander-harris/09/day-nine.py
 printf "\nTest nine passed. \n\n";
+python3 python/xander-harris/10/day-ten.py
+printf "\nTest ten passed. \n\n";
 
 printf "Testing jessica-hartwell submissions.\n\n\n";
 python3 python/jessica-hartwell/00/day-zero.py
