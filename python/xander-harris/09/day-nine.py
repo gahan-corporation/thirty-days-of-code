@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""HackerRank Day 9."""
 
 import select
 import sys
@@ -14,11 +15,13 @@ except Exception as e:
 
 
 def factorial(n):
+    """Compute a factorial."""
     if n == 1:
-        return n 
+        return n
 
     f = factorial(n-1) * n
     return f
+
 
 m = factorial(t)
 print(m)
