@@ -1,6 +1,13 @@
+---
 language: ruby
+sudo: "yes"
 rvm:
-- 2.0.0
-- 1.9.3
-- jruby-19mode
-- rbx-2
+  - 2.0.0
+  - 1.9.3
+  - jruby-19mode
+  - rbx-2
+script:
+  - "sudo apt-get -y update"
+  - "sudo apt-get -y install python3"
+  - "python/execute.bash"
+...
