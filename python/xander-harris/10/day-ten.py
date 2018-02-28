@@ -4,6 +4,7 @@
 
 def decimal_to_binary(quotient, binary):
     """Convert decimal to binary."""
+    print(quotient)
     new_quotient = quotient // 2
     remainder = quotient % 2
     binary.append(str(int(remainder)))
@@ -16,6 +17,7 @@ def decimal_to_binary(quotient, binary):
 
 def count_consecutive_ones(binary):
     """Count consecutive ones."""
+    print(binary)
     count = 1
 
     for i in range(1, len(binary)):
@@ -27,11 +29,4 @@ def count_consecutive_ones(binary):
     print(count)
 
 
-binary_result = decimal_to_binary(13, [])
-result = count_consecutive_ones(binary_result)
-
-binary_result = decimal_to_binary(5, [])
-result = count_consecutive_ones(binary_result)
-
-binary_result = decimal_to_binary(6, [])
-result = count_consecutive_ones(binary_result)
+[count_consecutive_ones(decimal_to_binary(i, [])) for i in range(1, 512)]
