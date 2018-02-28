@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """HackerRank Day 10."""
-n = int(input().strip())
+# n = int(input().strip())
+n = 13
 
 
 def decimal_to_binary(quotient, binary):
